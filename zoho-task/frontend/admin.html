@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+* { box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("https://i.pinimg.com/736x/80/c3/3a/80c33a35e5fec4191442dfb6b50ba31b.jpg");
+  background-size: cover;
+  color: white;
+}
+
+.container {
+  padding: 50px;
+}
+
+.card {
+  background: white;
+  color: black;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 30px 60px rgba(0,0,0,.4);
+}
+
+h1 { margin-bottom: 20px; }
+h2 { margin-bottom: 10px; }
+
+button {
+  padding: 10px 18px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <h1>Admin Dashboard</h1>
+
+  <div class="card">
+    <h2>Manage Roles</h2>
+    <p>Create roles and assign permissions</p>
+   <button onclick="location.href='admin_roles.html'">Open Role Manager</button>
+  </div>
+
+  <div class="card">
+    <h2>Users</h2>
+    <p>View users and assign roles</p>
+    <button onclick="location.href='admin_users.html'">Manage Users</button>
+  </div>
+
+  <div class="card">
+    <h2>Permissions</h2>
+    <p>Table & field level access</p>
+     <button onclick="location.href='admin_permissions.html'">Edit Permissions</button>
+  </div>
+
+<div id="rolePanel" style="display:none; margin:20px;">
+  <h3>Roles</h3>
+  <ul id="rolesList"></ul>
+</div>
+
+
+<div id="usersPanel" style="display:none; margin:20px;">
+  <h3>Users</h3>
+  <table id="usersTable" style="width:100%; background:white; border-radius:12px; padding:10px;"></table>
+</div>
+
+<div id="permissionPanel" style="display:none; margin:20px;">
+  <h3>Permissions</h3>
+  <pre id="permissionsBox" style="background:white; padding:15px; border-radius:12px;"></pre>
+</div>
+<script src="app.js"></script>
+
+
+</div>
+</body>
+</html>

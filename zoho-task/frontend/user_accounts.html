@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Accounts</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("https://i.pinimg.com/736x/80/c3/3a/80c33a35e5fec4191442dfb6b50ba31b.jpg");
+  background-size: cover;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.back-btn {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.back-btn:hover {
+  background: #000;
+}
+
+.card {
+  background: #fff;
+  color: #000;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 30px 60px rgba(0,0,0,.4);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; 
+}
+
+thead th {
+  text-align: left;
+  padding: 14px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  border-bottom: 2px solid #eee;
+}
+
+tbody td {
+  padding: 14px 12px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+th:nth-child(1), td:nth-child(1) { width: 18%; }
+th:nth-child(2), td:nth-child(2) { width: 26%; }
+th:nth-child(3), td:nth-child(3) { width: 18%; }
+th:nth-child(4), td:nth-child(4) { width: 18%; }
+th:nth-child(5), td:nth-child(5) {
+  width: 20%;
+  text-align: right;
+  font-weight: 600;
+  color: #007a6f;
+}
+</style>
+
+</head>
+
+<body onload="loadUserAccounts()">
+  <div class="container">
+
+    <div class="header">
+      <h1>Accounts</h1>
+      <button class="back-btn" onclick="go('user.html')">← Back</button>
+    </div>
+
+    <div class="card">
+      <table id="accountsTable">
+        <thead>
+          <tr>
+            <th>Customer</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Account #</th>
+            <th>Balance</th>
+          </tr>
+        </thead>
+        <tbody>
+        
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

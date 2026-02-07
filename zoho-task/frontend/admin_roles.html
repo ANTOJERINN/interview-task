@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Role Manager</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("https://i.pinimg.com/736x/80/c3/3a/80c33a35e5fec4191442dfb6b50ba31b.jpg");
+  background-size: cover;
+  color: white;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 30px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: white;
+  color: #111827;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 30px 60px rgba(0,0,0,.35);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #f9fafb;
+}
+
+th {
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+}
+
+td {
+  padding: 16px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 15px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #eef2ff;
+  color: #3730a3;
+}
+tbody tr:hover {
+  background: #f9fafb;
+}
+
+.action-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.btn-black {
+  background: #111827;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-black:hover {
+  background: #000;
+  transform: translateY(-1px);
+}
+
+</style>
+</head>
+
+<body onload="loadRoles()">
+
+<div class="page">
+  <h1>Role Manager</h1>
+
+  <div class="action-bar">
+  <button class="btn-black" onclick="addRole()">
+    + Add Role
+  </button>
+</div>
+
+
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Role ID</th>
+          <th>Role Name</th>
+        </tr>
+      </thead>
+      <tbody id="rolesTable">
+        <!-- injected by JS -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

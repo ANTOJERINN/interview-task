@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Manage Users</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+* { box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("https://i.pinimg.com/736x/80/c3/3a/80c33a35e5fec4191442dfb6b50ba31b.jpg");
+  background-size: cover;
+  color: white;
+}
+
+.container {
+  padding: 50px;
+}
+
+.card {
+  background: white;
+  color: black;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 30px 60px rgba(0,0,0,.4);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #f3f3f3;
+}
+
+th, td {
+  padding: 14px;
+  text-align: center;
+}
+
+th {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+tbody tr:hover {
+  background: #fafafa;
+}
+
+select {
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+</style>
+</head>
+
+<body onload="loadUsersPage()">
+  <div class="container">
+    <h1>Manage Users</h1>
+
+    <div class="card">
+      <table id="usersTable"></table>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> ANTO Bank </title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* { box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+body {
+  margin: 0;
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+    url("https://i.pinimg.com/736x/bb/6c/03/bb6c03fef4bf40c9283e4e27b54d3432.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 420px;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 40px 80px rgba(0,0,0,.4);
+}
+
+h1 { margin-bottom: 10px; }
+p { color: #666; margin-bottom: 30px; }
+
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 12px;
+  border-radius: 28px;
+  border: none;
+  background: black;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+  <h1>ANTO BANK</h1>
+  <p>role based access control system</p>
+
+  <button onclick="goLogin('admin')">Admin Login</button>
+  <button onclick="goLogin('user')">User Login</button>
+</div>
+
+<script>
+function goLogin(role) {
+  localStorage.setItem("login_role", role)
+  window.location = "login.html"
+}
+</script>
+</body>
+</html>

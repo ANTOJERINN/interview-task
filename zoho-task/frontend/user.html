@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>User Dashboard</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+* { font-family: 'Inter', sans-serif; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("https://i.pinimg.com/736x/80/c3/3a/80c33a35e5fec4191442dfb6b50ba31b.jpg");
+  background-size: cover;
+  color: white;
+}
+
+.container { padding: 50px; }
+
+.card {
+  background: white;
+  color: black;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 30px 60px rgba(0,0,0,.4);
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <h1>User Dashboard</h1>
+
+  <div class="card">
+    <h2>My Accounts</h2>
+    <p>View customer details & balances</p>
+    <button onclick="goAccounts()">Open</button>
+  </div>
+
+  <div class="card">
+    <h2>Transactions</h2>
+    <p>View transaction history</p>
+    <button onclick="goTransactions()">Open</button>
+  </div>
+
+  <div class="card">
+    <h2>Permissions</h2>
+    <p>Your access rights</p>
+    <button onclick="goPermissions()">View</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
